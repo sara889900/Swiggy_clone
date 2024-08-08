@@ -52,7 +52,7 @@ phases:
           -Dsonar.projectKey=swiggy \
           -Dsonar.sources=. \
           -Dsonar.host.url=http://184.72.153.241:9000 \
-          -Dsonar.login=$SONAR_TOKEN
+          # -Dsonar.login=$SONAR_TOKEN
       - aws ses send-email --from "s.taha@fifasoft.com" --to "madithatisreedhar123@gmail.com" --subject "CodeBuild Status: $CODEBUILD_BUILD_ID" --text "Build status: $CODEBUILD_BUILD_STATUS" --region "us-east-1"
 
 artifacts:
